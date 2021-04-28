@@ -27,11 +27,11 @@ mvn -X archetype:generate -DgroupId=com.pluralsight.aop -DartifactId=example -Da
   * Weaving: linking aspects with other application types or objects to create an advised object
 
 * Spring AOP advice types
- * Before
- * After returning
- * After throwing
- * After 
- * Around
+  * Before
+  * After returning
+  * After throwing
+  * After 
+  * Around
 * Spring AOP is proxy based
   * Auto-proxying: if Spring determines that a bean is advised by one or more aspects, it automatically generates a proxy for that bean to intercept method invocations and ensures that advice is run as needed.
 * A schema based AOP configuration
@@ -49,8 +49,8 @@ mvn -X archetype:generate -DgroupId=com.pluralsight.aop -DartifactId=example -Da
         </aop:aspect>
     </aop:config>
  ```
-  * ref has the value of the logginAspect bean defined before
-  * pointcut is defined using id and expression
-  * before and after reference pointcut
+    * ref has the value of the logginAspect bean defined before
+    * pointcut is defined using id and expression
+    * before and after reference pointcut
 
 * with Java @Configuration, add the @EnableAspectJAutoProxy annotation to enable @AspectJ support
