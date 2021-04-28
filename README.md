@@ -35,6 +35,9 @@ mvn -X archetype:generate -DgroupId=com.pluralsight.aop -DartifactId=example -Da
 * Spring AOP is proxy based
   * Auto-proxying: if Spring determines that a bean is advised by one or more aspects, it automatically generates a proxy for that bean to intercept method invocations and ensures that advice is run as needed.
 * A schema based AOP configuration
+  * ref has the value of the logginAspect bean defined before
+  * pointcut is defined using id and expression
+  * before and after reference pointcut
 ```
  <bean id="loggingAspect" class="com.pluralsight.springaop.example1.LoggingAspect"/>
 
@@ -49,8 +52,6 @@ mvn -X archetype:generate -DgroupId=com.pluralsight.aop -DartifactId=example -Da
         </aop:aspect>
     </aop:config>
  ```
-    * ref has the value of the logginAspect bean defined before
-    * pointcut is defined using id and expression
-    * before and after reference pointcut
+   
 
 * with Java @Configuration, add the @EnableAspectJAutoProxy annotation to enable @AspectJ support
