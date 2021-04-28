@@ -55,3 +55,17 @@ mvn -X archetype:generate -DgroupId=com.pluralsight.aop -DartifactId=example -Da
    
 
 * with Java @Configuration, add the @EnableAspectJAutoProxy annotation to enable @AspectJ support
+
+### Module 3 AspectJ support
+* Annotation support
+  * Annotate @Aspect on the Aspect bean
+  * Annotate @Before/@After("execution....") on the Aspect bean's method
+  * Add <<aop:aspectj-autoproxy/> to the xml configuration / or using Java @Configuration
+  * Declare the Aspect bean
+### Module 4-7 @Around
+* Creating Proxy Objects
+  * If target class implements an interface, JDK dynamic proxy standard mechanism implements the interface
+  * If target class does not implement an interface. CGLIB proxy mechanism extends the target class
+  * CGLIB proxy does not work with a final target class
+  * CGLIB proxy does not work with a final method in the target class
+
