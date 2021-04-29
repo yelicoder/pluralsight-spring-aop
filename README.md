@@ -69,3 +69,8 @@ mvn -X archetype:generate -DgroupId=com.pluralsight.aop -DartifactId=example -Da
   * CGLIB proxy does not work with a final target class
   * CGLIB proxy does not work with a final method in the target class
 
+### Module 8,9,10,11 Orghogonal Behavior
+* Orthogonal Behavior: use annotation instead of AspectJ expression
+* Use AOP to handle exception and logging
+
+
