@@ -1,5 +1,20 @@
 # pluralsight-spring-aop
 
+Basic concepts:
+https://www.dineshonjava.com/spring-aop-interview-questions-and-answers/
+
+### Module 1
+* Cross cutting concerns
+  * Logging
+  * Caching
+  * Exception handling
+  * User rights check
+  * Transactions
+  * Performancing monitoring
+* AOP solves the follwing problems
+  * code tangling
+  * code scattering
+
 ### Module 2
 * Create a Maven Java Project
 ```
@@ -28,9 +43,9 @@ mvn -X archetype:generate -DgroupId=com.pluralsight.aop -DartifactId=example -Da
 
 * Spring AOP advice types
   * Before
-  * After returning
-  * After throwing
-  * After 
+  * After returning: method returns normally
+  * After throwing: method exist by throwing an exception
+  * After: method exit (finally)
   * Around
 * Spring AOP is proxy based
   * Auto-proxying: if Spring determines that a bean is advised by one or more aspects, it automatically generates a proxy for that bean to intercept method invocations and ensures that advice is run as needed.
@@ -62,24 +77,37 @@ mvn -X archetype:generate -DgroupId=com.pluralsight.aop -DartifactId=example -Da
   * Annotate @Before/@After("execution....") on the Aspect bean's method
   * Add <<aop:aspectj-autoproxy/> to the xml configuration / or using Java @Configuration
   * Declare the Aspect bean
-
-* AspectJ dependency
-```
-<dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-aspects</artifactId>
-      <version>5.3.6</version> 
-</dependency>
-```
 ### Module 4-7 @Around
 * Creating Proxy Objects
   * If target class implements an interface, JDK dynamic proxy standard mechanism implements the interface
   * If target class does not implement an interface. CGLIB proxy mechanism extends the target class
   * CGLIB proxy does not work with a final target class
   * CGLIB proxy does not work with a final method in the target class
+  * CGLIB proxy can work with public and protected method. It should always work with public method
 
 ### Module 8,9,10,11 Orghogonal Behavior
 * Orthogonal Behavior: use annotation instead of AspectJ expression
 * Use AOP to handle exception and logging
 
+### Module 12
+* Declaring pointcuts
+  * a signature comprising a name and any parameters 
+  * pointcut expression that determines exactly which method executions we are interested in
+  * Example below: signature is allTaicketMethods. expression is @Pointcut(....)
+```
+@Pointcut("within(com.pluralsight.springaop.flightsmanagement.domain.Ticket)")
+    public void allTicketMethods() {
+    }
+```
+* Spring AOP supports the following pointcut designator (PCD): execution, within, this, target, args, @target, @args, @within, @annotation, bean(Sprint AOP only)
+* execution PCD format: ret-type-pattern, name-pattern and param-pattern are mandatory
+  * wild card * can be used in ret-type-pattern and name-pattern
+  * param-pattern
+    * (): method takes no parameters
+    * (..): match any number(zero or more) parameters
+    * (*): match one parameter of any type
+```
+execution(modifiers-pattern? ret-type-pattern declaring-type-pattern?name-pattern(param-pattern)
+                throws-pattern?)
+```
 
