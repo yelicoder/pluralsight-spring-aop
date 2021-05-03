@@ -77,6 +77,15 @@ mvn -X archetype:generate -DgroupId=com.pluralsight.aop -DartifactId=example -Da
   * Annotate @Before/@After("execution....") on the Aspect bean's method
   * Add <<aop:aspectj-autoproxy/> to the xml configuration / or using Java @Configuration
   * Declare the Aspect bean
+
+* AspectJ dependency
+```
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
+			<version>5.3.6</version>
+		</dependency>
+```
 ### Module 4-7 @Around
 * Creating Proxy Objects
   * If target class implements an interface, JDK dynamic proxy standard mechanism implements the interface
