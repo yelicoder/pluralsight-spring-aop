@@ -3,6 +3,11 @@
 *iml*
 **/target
 
+# maven
+
+
+*mvn*
+
 
 # Compiled class file
 *.class
