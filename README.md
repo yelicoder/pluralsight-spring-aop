@@ -120,3 +120,22 @@ execution(modifiers-pattern? ret-type-pattern declaring-type-pattern?name-patter
                 throws-pattern?)
 ```
 
+### Module 14 Spring Boot AOP Annotation only
+* AppConfig class need have annotation @Config and @@EnableAspectJAutoProxy
+* Each of the object class need be declared as a Bean using @Component
+* Aspect class need be annotated as @Aspect and @Component
+* Test class need @Autowired the bean to use them. Just use the new construction will not trigger Aspect
+* If multiple instances of a bean is used.
+  * the bean can be annoated by
+  ```
+    @Scope(value= ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+  ```
+  * Application Context can be @Autowired
+  ```
+    @Autowired
+	private ApplicationContext context;
+  ```
+  * Multiple bean instances can be retrieved by using the application context
+  ```
+     Passenger jim = context.getBean(Passenger.class);
+  ```
