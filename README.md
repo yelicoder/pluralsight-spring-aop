@@ -139,3 +139,13 @@ execution(modifiers-pattern? ret-type-pattern declaring-type-pattern?name-patter
   ```
      Passenger jim = context.getBean(Passenger.class);
   ```
+### Module 15 Spring AOP with annotation only
+* AppConfig class with @Configuration, @EnableAspectJAutoProxy, @ComponentScan(basePackages={"..."})
+* Get ApplicationContext and use it to get all beans
+```
+ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+flight = context.getBean(Flight.class);
+ticket = context.getBean(Ticket.class);
+
+Passenger jim = context.getBean(Passenger.class);
+```
