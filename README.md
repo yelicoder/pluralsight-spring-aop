@@ -10,7 +10,7 @@ https://www.dineshonjava.com/spring-aop-interview-questions-and-answers/
   * Exception handling
   * User rights check
   * Transactions
-  * Performancing monitoring
+  * Performance monitoring
 * AOP solves the follwing problems
   * code tangling
   * code scattering
@@ -149,3 +149,7 @@ ticket = context.getBean(Ticket.class);
 
 Passenger jim = context.getBean(Passenger.class);
 ```
+
+### Module 16 Spring AOP for Caching
+### Module 17 Spring APO for exception handling
+
