@@ -154,4 +154,6 @@ Passenger jim = context.getBean(Passenger.class);
 ### Module 17 Spring APO for exception handling
 ### Module 18 implements introduction
 * extends DelegatingIntroductionInterceptor
+* Create an advisor class extends DefaultIntroductionAdvisor
+* 
 
