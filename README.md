@@ -158,3 +158,4 @@ Passenger jim = context.getBean(Passenger.class);
 
 ### Module19 implements introduction declaratively
 * import org.junit.jupiter.api.Test instead of org.junit.Test. Otherwise, the @ContextConfiguration will not be picked up
+* @DeclarParent
