@@ -33,7 +33,7 @@ mvn -X archetype:generate -DgroupId=com.pluralsight.aop -DartifactId=example -Da
   * @AspectJ annotation
 * Spring AOP Concepts
   * Aspect: A modularization of a concern that cuts across multiple classes. They are regular classes
-  * Joint point: A point during the execution of a program, such as the execution of a method or the handling of an exception. In Spring AOP, a join point always represents a method execution.
+  * Join point: A point during the execution of a program, such as the execution of a method or the handling of an exception. In Spring AOP, a join point always represents a method execution.
   * Advice: Action taken by an aspect at a particular join point. Different types of advice include “around”, “before” and “after” advice.
   * Pointcut: A predicate that matches join points. Advice is associated with a pointcut expression and runs at any join point matched by the pointcut (for example, the execution of a method with a certain name).
   * Introduction: Declaring additional methods or fields on behalf of a type
