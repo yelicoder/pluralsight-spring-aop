@@ -155,6 +155,17 @@ Passenger jim = context.getBean(Passenger.class);
 ### Module 18 implements introduction
 * extends DelegatingIntroductionInterceptor
 * Create an advisor class extends DefaultIntroductionAdvisor
+* Introduction is used to declare mixin types. It advise an object to implement new interfaces.
+* Steps to create an introduction
+  * create an interface that to be implemented
+  * create an implementation of the interface that extends DelegatingIntroductionInterceptor and implements the interface
+  * create an advisor that extends DefaultIntroductionAdvisor and injected the implementation of the interface in the constructor
+  * create a proxy of the original class
+    * Instantiate a ProxyFactory
+    * ProxyFactory.setTarget(original class)
+    * ProxyFactory.addAdvisor(advisor just created)
+    * ProxyFactory.setOptimize(true)
+    * ProxyFactory.getProxy() to get the proxy class. The proxy class extends the original class and implemented the new interface. It has an instance of the implementation of the new interface so each call to the new interface can be delegated to the implementation.
 
 ### Module19 implements introduction declaratively
 * import org.junit.jupiter.api.Test instead of org.junit.Test. Otherwise, the @ContextConfiguration will not be picked up
