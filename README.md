@@ -179,3 +179,13 @@ Passenger jim = context.getBean(Passenger.class);
 * @DeclarParent
 
 ### Module20 @Around handle exception
+
+### More
+* JointPoint: JointPoint is an argument for the advice. The advice can use JointPoint to get the following:
+  * getArgs(): Returns the method arguments.
+  * getThis(): Returns the proxy object.
+  * getTarget(): Returns the target object.
+  * getSignature(): Returns a description of the method that is being advised.
+  * toString(): Prints a useful description of the method being advised.
+
+* ProceedingJoinPoint: ProceedingJoinPoint is an argument for the around advice. ProceedingJoinPoint has a method proceed() that calls the method being advised.
