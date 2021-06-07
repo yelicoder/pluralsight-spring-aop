@@ -3,6 +3,7 @@
 Basic concepts:
 https://www.dineshonjava.com/spring-aop-interview-questions-and-answers/
 https://mossgreen.github.io/Spring-Certification-Spring-AOP/
+https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#aop
 
 
 ### Module 1
