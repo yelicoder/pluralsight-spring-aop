@@ -152,6 +152,7 @@ Passenger jim = context.getBean(Passenger.class);
 
 ### Module 16 Spring AOP for Caching
 ### Module 17 Spring APO for exception handling
+* AfterThrowing
 ### Module 18 implements introduction
 * extends DelegatingIntroductionInterceptor
 * Create an advisor class extends DefaultIntroductionAdvisor
