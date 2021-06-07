@@ -2,6 +2,8 @@
 
 Basic concepts:
 https://www.dineshonjava.com/spring-aop-interview-questions-and-answers/
+https://mossgreen.github.io/Spring-Certification-Spring-AOP/
+
 
 ### Module 1
 * Cross cutting concerns
