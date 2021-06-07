@@ -188,4 +188,4 @@ Passenger jim = context.getBean(Passenger.class);
   * getSignature(): Returns a description of the method that is being advised.
   * toString(): Prints a useful description of the method being advised.
 
-* ProceedingJoinPoint: ProceedingJoinPoint is an argument for the around advice. ProceedingJoinPoint has a method proceed() that calls the method being advised.
+* ProceedingJoinPoint: ProceedingJoinPoint is a JoinPoint for the around advice. ProceedingJoinPoint has a method proceed() that calls the method being advised.
