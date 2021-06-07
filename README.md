@@ -181,7 +181,7 @@ Passenger jim = context.getBean(Passenger.class);
 ### Module20 @Around handle exception
 
 ### More
-* JointPoint: JointPoint is an argument for the advice. The advice can use JointPoint to get the following:
+* JoinPoint: JoinPoint is an argument for the advice. The advice can use JoinPoint to get the following:
   * getArgs(): Returns the method arguments.
   * getThis(): Returns the proxy object.
   * getTarget(): Returns the target object.
