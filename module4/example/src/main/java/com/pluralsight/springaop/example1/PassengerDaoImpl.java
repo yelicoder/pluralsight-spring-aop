@@ -14,6 +14,13 @@ public class PassengerDaoImpl implements PassengerDao {
 
         Passenger passenger = new Passenger(id);
         passengerMap.put(id, passenger);
+        selfInvocation();
+
         return passenger;
+    }
+
+    public void selfInvocation()
+    {
+        System.out.println("Self invocation");
     }
 }
