@@ -100,6 +100,11 @@ mvn -X archetype:generate -DgroupId=com.pluralsight.aop -DartifactId=example -Da
   * CGLIB proxy does not work with a final method in the target class
   * CGLIB proxy can work with public and protected method. It should always work with public method
 
+### Module4 around usiung JDK Dynamic proxy
+### Module5 around using CGLIB proxy
+### Module6 CGLIB proxy does not work if target class is final
+### Module7 CGLIB proxy will not work if the target method in target class is final
+
 ### Module 8,9,10,11 Orthogonal Behavior
 * Orthogonal Behavior: use annotation instead of AspectJ expression
 * Use AOP to handle exception and logging
