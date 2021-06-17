@@ -101,7 +101,10 @@ mvn -X archetype:generate -DgroupId=com.pluralsight.aop -DartifactId=example -Da
   * CGLIB proxy can work with public and protected method. It should always work with public method
 
 ### Module4 around usiung JDK Dynamic proxy
+* PassengerDaoImpl implements PassengerDao
+* Self Invocation does not work with Spring AOP
 ### Module5 around using CGLIB proxy
+* PassengerDaoImpl does not implement PassengerDao
 ### Module6 CGLIB proxy does not work if target class is final
 ### Module7 CGLIB proxy will not work if the target method in target class is final
 
