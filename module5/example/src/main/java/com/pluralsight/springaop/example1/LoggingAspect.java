@@ -13,11 +13,12 @@ public class LoggingAspect {
     private Logger logger = Logger.getLogger(LoggingAspect.class.getName());
 
     @Around("execution(* *.*Passenger(..))")
-    public Object log (ProceedingJoinPoint thisJointPoint) throws  Throwable{
-        String methodName = thisJointPoint.getSignature().getName();
-        Object[] methodArgs = thisJointPoint.getArgs();
-        logger.info("Call method " + methodName + " with arg " + methodArgs[0]);
-        Object result = thisJointPoint.proceed();
+    public Object log (ProceedingJoinPoint thisJoinPoint) throws  Throwable{
+        String methodName = thisJoinPoint.getSignature().getName();
+        Object[] methodArgs = thisJoinPoint.getArgs();
+        logger.info("Call method " + methodName + " with" +
+                " arg " + methodArgs[0]);
+        Object result = thisJoinPoint.proceed();
         logger.info("Method " + methodName + " returns " + result);
         return result;
     }
