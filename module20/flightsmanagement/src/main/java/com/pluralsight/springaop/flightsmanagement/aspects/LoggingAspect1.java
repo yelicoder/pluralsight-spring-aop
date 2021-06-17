@@ -29,7 +29,13 @@ public class LoggingAspect1 {
     @After("allTicketMethods()")
     public void loggingAdvice(JoinPoint joinPoint){
         logger.info("A ticket method had been called.");
-        logger.info(joinPoint.toString());
+        logger.info("joinPoint.toString = " + joinPoint.toString());
+        logger.info("joinPoint.getArgs = " + joinPoint.getArgs().toString());
+        logger.info("joinPoint.getSignature= " + joinPoint.getSignature().toString());
+        logger.info("joinPoint.getKind = " + joinPoint.getKind());
+        logger.info("joinPoint.getSourceLocation = " + joinPoint.getSourceLocation());
+        logger.info("jointPoint.getStaticPart" + joinPoint.getStaticPart());
+
         logger.info(joinPoint.getTarget().toString());
     }
 }
