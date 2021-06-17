@@ -185,6 +185,8 @@ Passenger jim = context.getBean(Passenger.class);
 * @DeclarParent
 
 ### Module20 @Around handle exception
+### Module21 Horrendous implementation of self-invocation aspect using Spring AOP
+### Module22 Spring AOP does not support self-invocation
 
 ### More
 * JoinPoint: JoinPoint is an argument for the advice. The advice can use JoinPoint to get the following:
