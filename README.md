@@ -2,7 +2,11 @@
 
 Basic concepts:
 https://www.dineshonjava.com/spring-aop-interview-questions-and-answers/
+
 https://mossgreen.github.io/Spring-Certification-Spring-AOP/
+
+https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#aop
+
 
 
 ### Module 1
@@ -123,7 +127,7 @@ execution(modifiers-pattern? ret-type-pattern declaring-type-pattern?name-patter
 ```
 
 ### Module 14 Spring Boot AOP Annotation only
-* AppConfig class need have annotation @Config and @@EnableAspectJAutoProxy
+* AppConfig class need have annotation @Config and @EnableAspectJAutoProxy
 * Each of the object class need be declared as a Bean using @Component
 * Aspect class need be annotated as @Aspect and @Component
 * Test class need @Autowired the bean to use them. Just use the new construction will not trigger Aspect
@@ -156,20 +160,29 @@ Passenger jim = context.getBean(Passenger.class);
 ### Module 17 Spring APO for exception handling
 * AfterThrowing
 ### Module 18 implements introduction
-* extends DelegatingIntroductionInterceptor
-* Create an advisor class extends DefaultIntroductionAdvisor
-* Introduction is used to declare mixin types. It advise an object to implement new interfaces.
+* Introduction is used to declare mixin types. It advises an object to implement new interfaces.
 * Steps to create an introduction
-  * create an interface that to be implemented
+  * create the new interface
   * create an implementation of the interface that extends DelegatingIntroductionInterceptor and implements the interface
-  * create an advisor that extends DefaultIntroductionAdvisor and injected the implementation of the interface in the constructor
+  * create an advisor that extends DefaultIntroductionAdvisor and injects the implementation of the interface in the constructor
   * create a proxy of the original class
     * Instantiate a ProxyFactory
     * ProxyFactory.setTarget(original class)
     * ProxyFactory.addAdvisor(advisor just created)
     * ProxyFactory.setOptimize(true)
-    * ProxyFactory.getProxy() to get the proxy class. The proxy class extends the original class and implemented the new interface. It has an instance of the implementation of the new interface so each call to the new interface can be delegated to the implementation.
+    * ProxyFactory.getProxy() to get the proxy class. The proxy class extends the original class and implements the new interface. It has an instance of the implementation of the new interface so each call to the new interface can be delegated to the implementation.
 
 ### Module19 implements introduction declaratively
 * import org.junit.jupiter.api.Test instead of org.junit.Test. Otherwise, the @ContextConfiguration will not be picked up
 * @DeclarParent
+
+### Module20 @Around handle exception
+
+### More
+* JoinPoint: JoinPoint is an argument for the advice. The advice can use JoinPoint to get the following:
+  * getArgs(): Returns the method arguments.
+  * getThis(): Returns the proxy object.
+  * getTarget(): Returns the target object.
+  * getSignature(): Returns a description of the method that is being advised.
+  * toString(): Prints a useful description of the method being advised.
+* ProceedingJoinPoint: ProceedingJoinPoint is a JoinPoint for the around advice. ProceedingJoinPoint has a method proceed() that calls the method being advised.
