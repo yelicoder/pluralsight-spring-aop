@@ -188,6 +188,7 @@ Passenger jim = context.getBean(Passenger.class);
 ### Module21 Horrendous implementation of self-invocation aspect using Spring AOP
 ### Module22 Spring AOP does not support self-invocation
 * Run PassengersManager. LogginAspect is triggered when calling PassengerDaoImpl.getPassenger. It is not triggered when PassengerDaoImpl.selfInvocation method is called
+* https://stackoverflow.com/questions/56614354/why-does-self-invocation-not-work-for-spring-proxies-e-g-with-aop
 
 ### More
 * JoinPoint: JoinPoint is an argument for the advice. The advice can use JoinPoint to get the following:
